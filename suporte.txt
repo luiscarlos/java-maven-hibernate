@@ -1,0 +1,59 @@
+<dependency>
+  <groupid>javax.xml.bind</groupid>
+  <artifactid>jaxb-api</artifactid>
+  <version>2.2.11</version>
+</dependency>
+<dependency>
+  <groupid>com.sun.xml.bind</groupid>
+  <artifactid>jaxb-core</artifactid>
+  <version>2.2.11</version>
+</dependency>
+<dependency>
+  <groupid>com.sun.xml.bind</groupid>
+  <artifactid>jaxb-impl</artifactid>
+  <version>2.2.11</version>
+</dependency>
+
+<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.2-1003-jdbc4</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>5.2.6.Final</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.2.6.Final</version>
+		</dependency>
+
+
+		<dependency>
+			<groupid>javax.xml.bind</groupid>
+			<artifactid>jaxb-api</artifactid>
+			<version>2.2.11</version>
+		</dependency>
+		<dependency>
+			<groupid>com.sun.xml.bind</groupid>
+			<artifactid>jaxb-core</artifactid>
+			<version>2.2.11</version>
+		</dependency>
+		<dependency>
+			<groupid>com.sun.xml.bind</groupid>
+			<artifactid>jaxb-impl</artifactid>
+			<version>2.2.11</version>
+		</dependency>
