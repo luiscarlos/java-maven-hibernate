@@ -123,11 +123,33 @@ public class TesteHibernate {
 	@Test
 	public void testQueryListMaxResult() {
 		DaoGeneric<UsuarioPessoa> daoGeneric = new DaoGeneric<UsuarioPessoa>();
-		java.util.List<UsuarioPessoa> list = daoGeneric.getEntityManager().createQuery(" from UsuarioPessoa order by nome asc")
+		java.util.List<UsuarioPessoa> list = daoGeneric.getEntityManager().createQuery(" from UsuarioPessoa order by nome desc")
 				.setMaxResults(2)
 				.getResultList();
 		for (UsuarioPessoa usuarioPessoa : list) {
 			System.out.println(usuarioPessoa);
 		}
+	}
+	
+	@Test
+	public void testeQueryListerParameter() {
+		DaoGeneric<UsuarioPessoa> daoGeneric = new DaoGeneric<UsuarioPessoa>();
+		java.util.List<UsuarioPessoa> list = daoGeneric.getEntityManager().createQuery(" from UsuarioPessoa where nome = :nome or sobrenome= :sobrenome")
+				.setParameter("nome", "Luis Carlos")
+				.setParameter("sobrenome", "Oliveira")
+				.getResultList();
+		
+		for (UsuarioPessoa usuarioPessoa : list) {
+			System.out.println(usuarioPessoa);
+		}
+	}
+	
+	@Test
+	public void testeQuerySomaIdade() {
+		DaoGeneric<UsuarioPessoa> daoGeneric = new DaoGeneric<UsuarioPessoa>();
+		Long somaIdade = (Long) daoGeneric.getEntityManager().
+				createQuery(" select sum(u.idade) from UsuarioPessoa u ").getSingleResult();
+		
+		System.out.println("A soma das idades -->" + somaIdade);
 	}
 }
